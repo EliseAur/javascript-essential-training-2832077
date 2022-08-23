@@ -19,7 +19,6 @@ const everydayPack = new Backpack(
 );
 
 const content = `
-  <article class="backpack" id="everyday">
     <figure class="backpack__image">
       <img src=${everydayPack.image} alt="" />
     </figure>
@@ -45,9 +44,17 @@ const content = `
         everydayPack.lidOpen
       }</span></li>
     </ul>
-  </article>
 `;
 
 const main = document.querySelector(".maincontent");
 
-main.innerHTML = content;
+const newArticle = document.createElement("article"); //creates a new article in the DOM, but it's not placed anywhere yet
+//then i'll take the article out of the template literal (see above) so we are not doubling the article. 
+newArticle.classList.add("backpack");//then I will append a new class to the article.
+newArticle.setAttribute("id", "everyday");//then I want to add an ID
+//finnally I want to place the template literal content inside the main
+newArticle.innerHTML = content;
+
+main.append(newArticle); //adds it as the end of the parent node. 
+
+//if on the other han you want to add an element as the first child of the parent: use the parentNode.prepent()

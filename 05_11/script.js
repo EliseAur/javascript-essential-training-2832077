@@ -72,10 +72,10 @@ const navContent = `
       <li><a href="#">Contact</a></li>
 `;
 
-const mainNav = document.createElement("nav")
-mainNav.classList.add("main-navigation");
-const navList = document.createElement("ul")
-navList.innerHTML = navContent
-mainNav.append(navList)
+const mainNav = document.createElement("nav") //created a new constant called main nav. 
+mainNav.classList.add("main-navigation"); //grabbed that new main nav using classList and add to add a new class to it called main-navigation
+const navList = document.createElement("ul") //created another constant called navList , a ul. So now we have a nav element and a ul element
+navList.innerHTML = navContent //grab navList and set the innerHTML to the navContent. Inject the code in the navContent into the unordered list. 
+mainNav.append(navList) //grab mainNav (the nav element) and append navList to it. So inside nav we now have a ul with all this list items
 
-document.querySelector(".siteheader").append(mainNav)
+document.querySelector(".siteheader").append(mainNav) //use this to find the siteheader class and then we append mainNav to the siteheader.

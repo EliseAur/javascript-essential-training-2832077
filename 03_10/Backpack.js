@@ -32,8 +32,20 @@ class Backpack {
     this.lidOpen = lidStatus;
   }
   newStrapLength(lengthLeft, lengthRight) {
-    this.strapLength.left = lengthLeft;
-    this.strapLength.right = lengthRight;
+   this.strapLength.left = lengthLeft;
+   this.strapLength.right = lengthRight;
+  }
+  newBackpackName(placeNewName) {
+    this.name = placeNewName;
+  }
+  newVolume(placeNewVolume) {
+    backpack.volume = placeNewVolume;
+  }
+  newColor(placeNewColor) {
+    this.color =placeNewColor;
+  }
+  newPocketNumber(placeNewPocketNUmber) {
+    backpack.pocketNum = placeNewPocketNUmber;
   }
 }
 

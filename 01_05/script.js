@@ -8,10 +8,12 @@
 See! this line is also commented out! */
 
 const updateBackpack = (update) => {
-  let main = document.querySelector("main"); // main is an element
+     let main = document.querySelector("main"); // main is an element
   main.innerHTML = markup(backpack);
   console.info(update);
-};
+}
+
+
 
 const backpack = {
   name: "Everyday Backpack",
